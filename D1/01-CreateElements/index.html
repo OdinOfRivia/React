@@ -23,10 +23,10 @@
             //this is any properties that we want to pass to the element
             { anything: "something" },
             // this is a child Element inside the div
-            React.createElement("h2", {}, "Child Element")
+            React.createElement("h2", {className: "theseNuts"}, "Child Element")
         )
         // < !--ReactDOM.render(what, where) -->
-        ReactDOM.render(greeting, document.querySelector('.root'))
+        ReactDOM.createRoot(document.querySelector('.root')).render(greeting)
     </script>
 </body>
 

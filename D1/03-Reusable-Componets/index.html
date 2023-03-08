@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React2</title>
+
+    <script type="text/babel" src="/D1/03-Reusable-Componets/Card.js"></script>
+</head>
+
+<body>
+    <div class="root"></div>
+    <script type="text/babel">
+        const dogs = [
+            { name: 'akita', image: 'https://images.dog.ceo/breeds/akita/512px-Akita_inu.jpg' },
+            { name: 'poodle', image: 'https://images.dog.ceo/breeds/poodle-standard/n02113799_2321.jpg' },
+            { name: 'mountain', image: 'https://images.dog.ceo/breeds/mountain-bernese/n02107683_7183.jpg' },
+            { name: 'pomeranian', image: 'https://images.dog.ceo/breeds/pomeranian/n02112018_6098.jpg' },
+            { name: 'otterhound', image: 'https://images.dog.ceo/breeds/otterhound/n02091635_1606.jpg' }
+        ]
+
+
+        ReactDOM.createRoot(document.querySelector('.root')).render(
+            <div>
+                <Card name={dogs[0].name} image={dogs[0].image}> </Card>
+                <Card name={dogs[1].name} image={dogs[1].image}> </Card>
+                <Card name={dogs[2].name} image={dogs[2].image}> </Card>
+                <Card name={dogs[3].name} image={dogs[3].image}> </Card>
+                <Card name={dogs[4].name} image={dogs[4].image}> </Card>
+            </div>
+        )
+    </script>
+</body>
+
+</html>
