@@ -26,9 +26,9 @@
                 React.createElement("div", { className: 'col' },
                     React.createElement("div", { className: 'card-medium' },
                         React.createElement("div", { className: 'card-image' },
-                            React.createElement("img", { src: `${imageURL}` })),
+                            React.createElement("img", { src: imageURL })),
                         React.createElement("div", { className: 'card-content' },
-                            React.createElement("p", {}, `${name}`))
+                            React.createElement("p", {}, name))
                     )));
 
         ReactDOM.createRoot(document.querySelector('.root')).render(markup)
