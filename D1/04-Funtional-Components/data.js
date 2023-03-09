@@ -1,3 +1,6 @@
+
+//In our data folder we would usually put constm, basically anything that is data.
+
 const dogs = [
     { name: 'akita', image: 'https://images.dog.ceo/breeds/akita/512px-Akita_inu.jpg' },
     { name: 'poodle', image: 'https://images.dog.ceo/breeds/poodle-standard/n02113799_2321.jpg' },
