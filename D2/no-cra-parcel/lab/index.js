@@ -11,12 +11,12 @@ function myIcons() {
     Github: "fa fa-github",
   };
 
-  const elements = Object.entries(icon).map(([key, value], index) => {
+  const elements = Object.entries(icon).map(([iconName, iconFontAwsome], index) => {
       console.log(index);
     return (
-      <div className="button" key={index}>
+      <div className="button" key={iconName}>
         <div className="icon">
-          <i className={value}></i>
+          <i className={iconFontAwsome}></i>
         </div>
         <span>{key}</span>
       </div>
