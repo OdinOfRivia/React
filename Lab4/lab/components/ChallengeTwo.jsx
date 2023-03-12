@@ -11,11 +11,12 @@ const studentList = [
 ];
 
 export default class ChallengeTwo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      shuffledNames: studentList
-    };
+  state = {
+    shuffledNames: []
+  };
+
+  componentDidMount() {
+    this.setState({ shuffledNames: studentList });
   }
 
   randomize = () => {

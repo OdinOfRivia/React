@@ -25933,10 +25933,16 @@ var studentList = ["Randall Malfoy", "Kvothe Black", "Chun Zorander", "Leomund R
 var ChallengeTwo = /*#__PURE__*/function (_Component) {
   _inherits(ChallengeTwo, _Component);
   var _super = _createSuper(ChallengeTwo);
-  function ChallengeTwo(props) {
+  function ChallengeTwo() {
     var _this;
     _classCallCheck(this, ChallengeTwo);
-    _this = _super.call(this, props);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    _this = _super.call.apply(_super, [this].concat(args));
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      shuffledNames: []
+    });
     _defineProperty(_assertThisInitialized(_this), "randomize", function () {
       var shuffled = _toConsumableArray(_this.state.shuffledNames).sort(function () {
         return Math.random() - 0.5;
@@ -25945,12 +25951,16 @@ var ChallengeTwo = /*#__PURE__*/function (_Component) {
         shuffledNames: shuffled
       });
     });
-    _this.state = {
-      shuffledNames: studentList
-    };
     return _this;
   }
   _createClass(ChallengeTwo, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.setState({
+        shuffledNames: studentList
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, this.state.shuffledNames.map(function (name) {
