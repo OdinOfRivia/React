@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 
-const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank'];
+const studentList = [
+  "Randall Malfoy",
+  "Kvothe Black",
+  "Chun Zorander",
+  "Leomund Ridcully",
+  "Rary Stibbons",
+  "Gandalf Dresden",
+  "Zeddicus Doom",
+];
 
 export default class ChallengeTwo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shuffledNames: names
+      shuffledNames: studentList
     };
   }
 
@@ -18,12 +26,12 @@ export default class ChallengeTwo extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.randomize}>Randomize Names</button>
         <ul>
           {this.state.shuffledNames.map((name) => (
             <li key={name}>{name}</li>
-          ))}
+            ))}
         </ul>
+            <button onClick={this.randomize}>Randomize Names</button>
       </div>
     );
   }

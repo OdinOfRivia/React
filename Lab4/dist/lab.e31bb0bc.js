@@ -25929,7 +25929,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank'];
+var studentList = ["Randall Malfoy", "Kvothe Black", "Chun Zorander", "Leomund Ridcully", "Rary Stibbons", "Gandalf Dresden", "Zeddicus Doom"];
 var ChallengeTwo = /*#__PURE__*/function (_Component) {
   _inherits(ChallengeTwo, _Component);
   var _super = _createSuper(ChallengeTwo);
@@ -25946,20 +25946,20 @@ var ChallengeTwo = /*#__PURE__*/function (_Component) {
       });
     });
     _this.state = {
-      shuffledNames: names
+      shuffledNames: studentList
     };
     return _this;
   }
   _createClass(ChallengeTwo, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
-        onClick: this.randomize
-      }, "Randomize Names"), /*#__PURE__*/_react.default.createElement("ul", null, this.state.shuffledNames.map(function (name) {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, this.state.shuffledNames.map(function (name) {
         return /*#__PURE__*/_react.default.createElement("li", {
           key: name
         }, name);
-      })));
+      })), /*#__PURE__*/_react.default.createElement("button", {
+        onClick: this.randomize
+      }, "Randomize Names"));
     }
   }]);
   return ChallengeTwo;
