@@ -20,7 +20,7 @@ export default class ChallengeTwo extends Component {
   }
 
   randomize = () => {
-    const shuffled = [...this.state.shuffledNames].sort(() => Math.random() - 0.5);
+    const shuffled = [this.state.shuffledNames].sort(() => Math.random() - 0.5);
     this.setState({ shuffledNames: shuffled });
   };
 
