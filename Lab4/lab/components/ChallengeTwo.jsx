@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 const studentList = [
   "Randall Malfoy",
@@ -12,28 +12,36 @@ const studentList = [
 
 export default class ChallengeTwo extends Component {
   state = {
-    shuffledNames: []
+    shuffledNames: [],
   };
 
   componentDidMount() {
-    this.setState({ shuffledNames: studentList });
+    setTimeout(() => {
+      this.setState({ shuffledNames: studentList });
+    }, 3000);
   }
 
   randomize = () => {
-    const shuffled = [this.state.shuffledNames].sort(() => Math.random() - 0.5);
+    //Fisher-Yates shuffle algorithm
+    const shuffled = [...this.state.shuffledNames].sort(() => Math.random() - 0.5);
     this.setState({ shuffledNames: shuffled });
   };
 
   render() {
     return (
-      <div>
-        <ul>
-          {this.state.shuffledNames.map((name) => (
-            <li key={name}>{name}</li>
+      <>
+        <h2>Challange 2</h2>
+        <div className="msg">
+          <ul>
+            {this.state.shuffledNames.map((name) => (
+              <li key={name}>{name}</li>
             ))}
-        </ul>
-            <button onClick={this.randomize}>Randomize Names</button>
-      </div>
+          </ul>
+        </div>
+        <button onClick={this.randomize} className="btn large">
+          Randomize Names
+        </button>
+      </>
     );
   }
 }
