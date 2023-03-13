@@ -33,8 +33,8 @@ export default class ChallengeTwo extends Component {
         <h2>Challange 2</h2>
         <div className="msg">
           <ul>
-            {this.state.shuffledNames.map((name) => (
-              <li key={name}>{name}</li>
+            {this.state.shuffledNames.map((name, index) => (
+              <li key={index}>{name}</li>
             ))}
           </ul>
         </div>

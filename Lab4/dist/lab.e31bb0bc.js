@@ -25969,9 +25969,9 @@ var ChallengeTwo = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h2", null, "Challange 2"), /*#__PURE__*/_react.default.createElement("div", {
         className: "msg"
-      }, /*#__PURE__*/_react.default.createElement("ul", null, this.state.shuffledNames.map(function (name) {
+      }, /*#__PURE__*/_react.default.createElement("ul", null, this.state.shuffledNames.map(function (name, index) {
         return /*#__PURE__*/_react.default.createElement("li", {
-          key: name
+          key: index
         }, name);
       }))), /*#__PURE__*/_react.default.createElement("button", {
         onClick: this.randomize,
