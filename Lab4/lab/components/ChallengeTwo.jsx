@@ -22,7 +22,9 @@ export default class ChallengeTwo extends Component {
   }
 
   randomize = () => {
-    //Fisher-Yates shuffle algorithm
+    //Fisher-Yates shuffle algorithm (Kinda) The real this one determins if we should swap bassed
+    // on if our number is positive or negative. The Fisher-Yates algorithm makes sure all elements in 
+    // array are swapped
     const shuffled = [...this.state.shuffledNames].sort(() => Math.random() - 0.5);
     this.setState({ shuffledNames: shuffled });
   };

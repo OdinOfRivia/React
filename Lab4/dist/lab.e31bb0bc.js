@@ -25944,7 +25944,9 @@ var ChallengeTwo = /*#__PURE__*/function (_Component) {
       shuffledNames: []
     });
     _defineProperty(_assertThisInitialized(_this), "randomize", function () {
-      //Fisher-Yates shuffle algorithm
+      //Fisher-Yates shuffle algorithm (Kinda) The real this one determins if we should swap bassed
+      // on if our number is positive or negative. The Fisher-Yates algorithm makes sure all elements in 
+      // array are swapped
       var shuffled = _toConsumableArray(_this.state.shuffledNames).sort(function () {
         return Math.random() - 0.5;
       });
