@@ -36,7 +36,9 @@ export default class ChallengeTwo extends Component {
         <div className="msg">
           <ul>
             {this.state.shuffledNames.map((name, index) => (
-              <li key={index}>{name}</li>
+              <React.Fragment key={index}>
+                <li>{name}</li>
+              </React.Fragment>
             ))}
           </ul>
         </div>
