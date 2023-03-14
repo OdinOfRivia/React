@@ -1,0 +1,14 @@
+{
+    "workbench.colorCustomizations": {
+        "minimap.background": "#00000040",
+        "scrollbar.shadow": "#00000040"
+    },
+    "emmet.preferences": {
+    
+    },
+    
+        "emmet.includeLanguages": {
+           "javascript": "javascriptreact"
+        }
+     
+}
